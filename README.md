@@ -1,2 +1,7 @@
 # project_flutter
-#Fluttter
+# Flutter
+app architecture MVVM
+Views
+View models
+Repositories
+Services

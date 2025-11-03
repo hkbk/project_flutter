@@ -1,0 +1,151 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+HomeUserPlanInfoResponse _$HomeUserPlanInfoResponseFromJson(
+        Map<String, dynamic> json) =>
+    HomeUserPlanInfoResponse(
+      code: json['code'] as num?,
+      status: json['status'] as bool?,
+      message: json['message'] as String?,
+      backgroundColor: json['backgroud_color'] as String?,
+      alert: json['alert'] as String?,
+      data: json['data'] == null
+          ? null
+          : HomeUserPlanInfoData.fromJson(json['data'] as Map<String, dynamic>),
+    );
+
+HomeUserPlanInfoData _$HomeUserPlanInfoDataFromJson(
+        Map<String, dynamic> json) =>
+    HomeUserPlanInfoData(
+      planDetails: json['plan_details'] == null
+          ? null
+          : HomeUserPlanInfoPlanDetails.fromJson(
+              json['plan_details'] as Map<String, dynamic>),
+      planUsageInfo: json['plan_usage_info'] == null
+          ? null
+          : HomeUserPlanInfoPlanUsageInfo.fromJson(
+              json['plan_usage_info'] as Map<String, dynamic>),
+      billInfo: json['bill_info'] == null
+          ? null
+          : HomeUserPlanInfoBillInfo.fromJson(
+              json['bill_info'] as Map<String, dynamic>),
+    );
+
+HomeUserPlanInfoPlanDetails _$HomeUserPlanInfoPlanDetailsFromJson(
+        Map<String, dynamic> json) =>
+    HomeUserPlanInfoPlanDetails(
+      agreementInfo: json['agreement_info'] == null
+          ? null
+          : HomeUserPlanInfoAgreementInfo.fromJson(
+              json['agreement_info'] as Map<String, dynamic>),
+      vasInfo: (json['vas_info'] as List<dynamic>?)
+          ?.map((e) =>
+              HomeUserPlanInfoVasInfo.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      productInfo: json['product_info'] == null
+          ? null
+          : HomeUserPlanInfoProductInfo.fromJson(
+              json['product_info'] as Map<String, dynamic>),
+    );
+
+HomeUserPlanInfoAgreementInfo _$HomeUserPlanInfoAgreementInfoFromJson(
+        Map<String, dynamic> json) =>
+    HomeUserPlanInfoAgreementInfo(
+      agreementNo: json['vas_info'] as String?,
+      promotionCode: json['promotion_code'] as String?,
+      packageCode: json['package_code'] as String?,
+      packageName: json['package_name'] as String?,
+      homePackageCode: json['home_package_code'] as String?,
+      homePackageName: json['home_package_name'] as String?,
+      agreementStartDate: json['agreement_startdate'] as String?,
+      expiryDate: json['expiry_date'] as String?,
+      status: json['status'] as String?,
+      entityCode: json['entity_code'] as String?,
+      subscriptionPeriod: json['subscription_period'] as String?,
+      payTerm: json['payterm'] as String?,
+      billingCycleCode: json['billingcycle_code'] as String?,
+      contractType: json['contract_type'] as String?,
+      outlets: json['outlets'] as String?,
+      servicePoints: json['service_points'] as String?,
+      packageTenure: json['package_tenure'] as String?,
+      dueDate: json['due_date'] as String?,
+      subscriptionEndDate: json['subscription_end_date'] as String?,
+      currentSpeed: json['current_speed'] as String?,
+      currentSpeedUnit: json['current_speed_unit'] as String?,
+      packageQuota: json['package_quota'] as String?,
+      isNew: json['is_new'] as String?,
+      isBundle: json['is_bundle'] as String?,
+    );
+
+HomeUserPlanInfoVasInfo _$HomeUserPlanInfoVasInfoFromJson(
+        Map<String, dynamic> json) =>
+    HomeUserPlanInfoVasInfo(
+      id: json['id'] as String?,
+      planName: json['planName'] as String?,
+      logo: json['logo'] as String?,
+      subscribed: json['subscribed'] as String?,
+      actionable: json['actionable'] as String?,
+      subscribeUrl: json['subscribe_url'] as String?,
+    );
+
+HomeUserPlanInfoProductInfo _$HomeUserPlanInfoProductInfoFromJson(
+        Map<String, dynamic> json) =>
+    HomeUserPlanInfoProductInfo(
+      productCode: json['product_code'] as String?,
+      productDesc: json['product_desc'] as String?,
+    );
+
+HomeUserPlanInfoPlanUsageInfo _$HomeUserPlanInfoPlanUsageInfoFromJson(
+        Map<String, dynamic> json) =>
+    HomeUserPlanInfoPlanUsageInfo(
+      outBytesLimit: json['outbyteslimit'] as String?,
+      outBytesUsed: json['outbytesused'] as String?,
+      outBytesRemaining: json['outbytesremaining'],
+      topupLimit: json['topuplimit'] as String?,
+      topupRemaining: json['topupremaining'] as String?,
+      topupUsed: json['topupused'] as String?,
+      topupStartDate: json['topupStartDate'] as String?,
+      topupExpiryDate: json['topupExpiryDate'] as String?,
+      boostSpeed: json['boostSpeed'] as String?,
+      boostStartDate: json['boostStartDate'] as String?,
+      boostExpiryDate: json['boostExpiryDate'] as String?,
+      quotaType: json['quota_type'] as String?,
+      totalLimit: json['total_limit'] as num?,
+      totalUsed: json['totalused'] as String?,
+      totalRemaining: json['totalremaining'],
+    );
+
+HomeUserPlanInfoBillInfo _$HomeUserPlanInfoBillInfoFromJson(
+        Map<String, dynamic> json) =>
+    HomeUserPlanInfoBillInfo(
+      accountNo: json['accountno'] as String?,
+      userId: json['user_id'] as String?,
+      subscriberName: json['subscribername'] as String?,
+      phoneNumber: json['phonenumber'] as String?,
+      address: json['address'] == null
+          ? null
+          : HomeUserPlanInfoAddress.fromJson(
+              json['address'] as Map<String, dynamic>),
+      billNo: json['billno'] as String?,
+      billDate: json['billdate'] as String?,
+      accountPeriod: json['account_period'] as String?,
+      previousDue: json['previous_due'] as String?,
+      currentInvoiceAmt: json['current_invoice_amt'] as String?,
+      totalDue: json['total_due'] as String?,
+      billDueDate: json['bill_due_date'] as String?,
+      errorNo: json['errorno'] as String?,
+      errorMessage: json['errormessage'] as String?,
+    );
+
+HomeUserPlanInfoAddress _$HomeUserPlanInfoAddressFromJson(
+        Map<String, dynamic> json) =>
+    HomeUserPlanInfoAddress(
+      line1: json['line1'] as String?,
+      line2: json['line2'] as String?,
+      line3: json['line3'] as String?,
+      district: json['district'] as String?,
+      state: json['state'] as String?,
+      region: json['region'] as String?,
+      country: json['country'] as String?,
+    );

@@ -1,0 +1,31 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+CommunityModel _$CommunityModelFromJson(Map<String, dynamic> json) =>
+    CommunityModel(
+      data: (json['data'] as List<dynamic>?)
+          ?.map((e) => CommunityData.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+Map<String, dynamic> _$CommunityModelToJson(CommunityModel instance) =>
+    <String, dynamic>{
+      'data': instance.data,
+    };
+
+CommunityData _$CommunityDataFromJson(Map<String, dynamic> json) =>
+    CommunityData(
+      project: json['project'] as String?,
+      subArea: json['SubArea'] as String?,
+      area: json['Area'] as String?,
+      branch: json['Branch'] as String?,
+    );
+
+Map<String, dynamic> _$CommunityDataToJson(CommunityData instance) =>
+    <String, dynamic>{
+      'project': instance.project,
+      'SubArea': instance.subArea,
+      'Area': instance.area,
+      'Branch': instance.branch,
+    };

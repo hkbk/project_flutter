@@ -1,0 +1,50 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+CityMaster _$CityMasterFromJson(Map<String, dynamic> json) => CityMaster(
+      id: json['id'] as String?,
+      cityName: json['city_name'] as String?,
+      displayName: json['display_name'] as String?,
+      cityCode: json['city_code'] as String?,
+      shortCode: json['short_code'] as String?,
+      accountNumber: json['account_number'] as String?,
+      supportNumber: json['support_number'] as String?,
+      supportEmail: json['support_email'] as String?,
+      parentId: json['parent_id'] as String?,
+      latitude: json['latitude'] as String?,
+      longitude: json['longitude'] as String?,
+      geoX1: json['geo_x1'] as String?,
+      geoY1: json['geo_y1'] as String?,
+      geoX2: json['geo_x2'] as String?,
+      geoY2: json['geo_y2'] as String?,
+      status: json['status'] as String?,
+      boxInstallPrice: json['box_install_price'] as String?,
+      dedicatedSwitchPrice: json['dedicated_switch_price'] as String?,
+      dedicatedSwitchRefundAmt: json['dedicated_switch_refund_amt'] as String?,
+      paymentModes: json['payment_modes'],
+    );
+
+Map<String, dynamic> _$CityMasterToJson(CityMaster instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'city_name': instance.cityName,
+      'display_name': instance.displayName,
+      'city_code': instance.cityCode,
+      'short_code': instance.shortCode,
+      'account_number': instance.accountNumber,
+      'support_number': instance.supportNumber,
+      'support_email': instance.supportEmail,
+      'parent_id': instance.parentId,
+      'latitude': instance.latitude,
+      'longitude': instance.longitude,
+      'geo_x1': instance.geoX1,
+      'geo_y1': instance.geoY1,
+      'geo_x2': instance.geoX2,
+      'geo_y2': instance.geoY2,
+      'status': instance.status,
+      'box_install_price': instance.boxInstallPrice,
+      'dedicated_switch_price': instance.dedicatedSwitchPrice,
+      'dedicated_switch_refund_amt': instance.dedicatedSwitchRefundAmt,
+      'payment_modes': instance.paymentModes,
+    };

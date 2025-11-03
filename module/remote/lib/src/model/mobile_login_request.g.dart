@@ -1,0 +1,19 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'mobile_login_request.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_MobileLoginRequest _$$_MobileLoginRequestFromJson(
+        Map<String, dynamic> json) =>
+    _$_MobileLoginRequest(
+      mobileNo: json['mobileno'] as String?,
+    );
+
+Map<String, dynamic> _$$_MobileLoginRequestToJson(
+        _$_MobileLoginRequest instance) =>
+    <String, dynamic>{
+      'mobileno': instance.mobileNo,
+    };

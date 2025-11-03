@@ -1,0 +1,38 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+RegisterProspectResponse _$RegisterProspectResponseFromJson(
+        Map<String, dynamic> json) =>
+    RegisterProspectResponse(
+      code: json['code'] as num?,
+      status: json['status'] as bool?,
+      message: json['message'] as String?,
+      data: json['data'] == null
+          ? null
+          : ProspectData.fromJson(json['data'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$RegisterProspectResponseToJson(
+        RegisterProspectResponse instance) =>
+    <String, dynamic>{
+      'code': instance.code,
+      'status': instance.status,
+      'message': instance.message,
+      'data': instance.data,
+    };
+
+ProspectData _$ProspectDataFromJson(Map<String, dynamic> json) => ProspectData(
+      prospectNo: json['prospect_no'] as String?,
+      isFeasible: json['is_feasible'] as bool?,
+      feasibilityType: json['feasibility_type'] as int?,
+      feasibilityMessage: json['feasibility_message'] as String?,
+    );
+
+Map<String, dynamic> _$ProspectDataToJson(ProspectData instance) =>
+    <String, dynamic>{
+      'prospect_no': instance.prospectNo,
+      'is_feasible': instance.isFeasible,
+      'feasibility_type': instance.feasibilityType,
+      'feasibility_message': instance.feasibilityMessage,
+    };

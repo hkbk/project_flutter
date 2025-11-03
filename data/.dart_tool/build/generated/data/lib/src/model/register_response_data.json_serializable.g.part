@@ -1,0 +1,23 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+RegisterResponseData _$RegisterResponseDataFromJson(
+        Map<String, dynamic> json) =>
+    RegisterResponseData(
+      code: json['code'] as num?,
+      status: json['status'] as bool?,
+      message: json['message'] as String?,
+      data: json['data'],
+      count: json['count'] as num?,
+    );
+
+Map<String, dynamic> _$RegisterResponseDataToJson(
+        RegisterResponseData instance) =>
+    <String, dynamic>{
+      'code': instance.code,
+      'status': instance.status,
+      'message': instance.message,
+      'data': instance.data,
+      'count': instance.count,
+    };

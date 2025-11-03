@@ -1,0 +1,22 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+HomeUserStatusResponse _$HomeUserStatusResponseFromJson(
+        Map<String, dynamic> json) =>
+    HomeUserStatusResponse(
+      code: json['code'] as num?,
+      status: json['status'] as bool?,
+      message: json['message'] as String?,
+      data: json['data'] == null
+          ? null
+          : HomeUserStatusData.fromJson(json['data'] as Map<String, dynamic>),
+    );
+
+HomeUserStatusData _$HomeUserStatusDataFromJson(Map<String, dynamic> json) =>
+    HomeUserStatusData(
+      status: json['status'] as num?,
+      reconnectionDate: json['ReconnectionDate'] as String?,
+      disconnectionDate: json['DisconnectionDate'] as String?,
+      orderStatus: json['OrderStatus'] as String?,
+    );

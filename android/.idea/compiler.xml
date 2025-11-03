@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel target="1.8">
+      <module name="android.flutter_image_compress_common" target="16" />
+      <module name="android.flutter_inappwebview" target="16" />
+      <module name="android.permission_handler_android" target="16" />
+      <module name="com.act.wifi_analyzer.android.wifi_analyzer" target="16" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

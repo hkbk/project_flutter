@@ -1,0 +1,12 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+DndUpdateResponseData _$DndUpdateResponseDataFromJson(
+        Map<String, dynamic> json) =>
+    DndUpdateResponseData(
+      code: json['code'] as num?,
+      status: json['status'] as bool?,
+      message: json['message'] as String?,
+      data: json['data'] as Map<String, dynamic>?,
+    );

@@ -1,0 +1,137 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_AddOnResponseData _$$_AddOnResponseDataFromJson(Map<String, dynamic> json) =>
+    _$_AddOnResponseData(
+      code: json['code'] as num?,
+      status: json['status'] as bool?,
+      message: json['message'] as String?,
+      routers: (json['data'] as List<dynamic>?)
+          ?.map((e) => RouterAddOn.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      others: json['activevas'] as String?,
+    );
+
+Map<String, dynamic> _$$_AddOnResponseDataToJson(
+        _$_AddOnResponseData instance) =>
+    <String, dynamic>{
+      'code': instance.code,
+      'status': instance.status,
+      'message': instance.message,
+      'data': instance.routers,
+      'activevas': instance.others,
+    };
+
+_$_RouterAddOn _$$_RouterAddOnFromJson(Map<String, dynamic> json) =>
+    _$_RouterAddOn(
+      productCode: json['product_code'] as String?,
+      productId: json['product_id'] as String?,
+      routerName: json['router_name'] as String?,
+      productImage: json['product_image'] as String?,
+      priceWithoutTax: json['price_without_tax'] as String?,
+      priceWithTax: json['price_with_tax'] as String?,
+      installationPrice: json['installation_price'] as String?,
+      refundAmt: json['refund_amt'] as String?,
+      description: json['description'] as String?,
+      preferred: json['preferred'] as num?,
+    );
+
+Map<String, dynamic> _$$_RouterAddOnToJson(_$_RouterAddOn instance) =>
+    <String, dynamic>{
+      'product_code': instance.productCode,
+      'product_id': instance.productId,
+      'router_name': instance.routerName,
+      'product_image': instance.productImage,
+      'price_without_tax': instance.priceWithoutTax,
+      'price_with_tax': instance.priceWithTax,
+      'installation_price': instance.installationPrice,
+      'refund_amt': instance.refundAmt,
+      'description': instance.description,
+      'preferred': instance.preferred,
+    };
+
+_$_OtherAddOn _$$_OtherAddOnFromJson(Map<String, dynamic> json) =>
+    _$_OtherAddOn(
+      image: json['image'] as String?,
+      name: json['name'] as String?,
+      about: json['about'] as String?,
+      prepaid: json['prepaid'] as String?,
+      price: json['price'] as String?,
+      option: (json['option'] as List<dynamic>?)
+          ?.map((e) => AddOnPriceOption.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      knowMore: json['knowmore'] as String?,
+      tagHeader: json['tagheader'] as String?,
+      taxInfo: json['taxinfo'] as String?,
+      headerVasCode: json['headervascode'] as String?,
+      productType: json['product_type'] as String?,
+      titleIcon: json['title_icon'] as String?,
+      listIcon: json['list_icon'] as String?,
+      mainBanner: json['main_banner'] as String?,
+    );
+
+Map<String, dynamic> _$$_OtherAddOnToJson(_$_OtherAddOn instance) =>
+    <String, dynamic>{
+      'image': instance.image,
+      'name': instance.name,
+      'about': instance.about,
+      'prepaid': instance.prepaid,
+      'price': instance.price,
+      'option': instance.option,
+      'knowmore': instance.knowMore,
+      'tagheader': instance.tagHeader,
+      'taxinfo': instance.taxInfo,
+      'headervascode': instance.headerVasCode,
+      'product_type': instance.productType,
+      'title_icon': instance.titleIcon,
+      'list_icon': instance.listIcon,
+      'main_banner': instance.mainBanner,
+    };
+
+_$_AddOnPriceOption _$$_AddOnPriceOptionFromJson(Map<String, dynamic> json) =>
+    _$_AddOnPriceOption(
+      vasName: json['vasname'] as String?,
+      vasCode: json['vascode'] as String?,
+      displayPrice: json['display_price'] as String?,
+      forRent: json['for_rent'] as num?,
+      tag: json['tag'] as String?,
+      price: json['price'] as num?,
+    );
+
+Map<String, dynamic> _$$_AddOnPriceOptionToJson(_$_AddOnPriceOption instance) =>
+    <String, dynamic>{
+      'vasname': instance.vasName,
+      'vascode': instance.vasCode,
+      'display_price': instance.displayPrice,
+      'for_rent': instance.forRent,
+      'tag': instance.tag,
+      'price': instance.price,
+    };
+
+_$_AddOnData _$$_AddOnDataFromJson(Map<String, dynamic> json) => _$_AddOnData(
+      name: json['name'] as String?,
+      items: json['items'] as List<dynamic>?,
+    );
+
+Map<String, dynamic> _$$_AddOnDataToJson(_$_AddOnData instance) =>
+    <String, dynamic>{
+      'name': instance.name,
+      'items': instance.items,
+    };
+
+_$_AddOnOptionPriceData _$$_AddOnOptionPriceDataFromJson(
+        Map<String, dynamic> json) =>
+    _$_AddOnOptionPriceData(
+      name: json['name'] as String?,
+      items: (json['items'] as List<dynamic>?)
+          ?.map((e) => AddOnPriceOption.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+Map<String, dynamic> _$$_AddOnOptionPriceDataToJson(
+        _$_AddOnOptionPriceData instance) =>
+    <String, dynamic>{
+      'name': instance.name,
+      'items': instance.items,
+    };

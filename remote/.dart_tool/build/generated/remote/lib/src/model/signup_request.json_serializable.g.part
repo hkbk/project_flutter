@@ -1,0 +1,17 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_SignupRequest _$$_SignupRequestFromJson(Map<String, dynamic> json) =>
+    _$_SignupRequest(
+      name: json['name'] as String?,
+      city: json['city'] as String?,
+      mobileNo: json['mobileno'] as String?,
+    );
+
+Map<String, dynamic> _$$_SignupRequestToJson(_$_SignupRequest instance) =>
+    <String, dynamic>{
+      'name': instance.name,
+      'city': instance.city,
+      'mobileno': instance.mobileNo,
+    };

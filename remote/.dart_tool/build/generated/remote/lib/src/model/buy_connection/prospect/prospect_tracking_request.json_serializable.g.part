@@ -1,0 +1,15 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_ProspectTrackingRequest _$$_ProspectTrackingRequestFromJson(
+        Map<String, dynamic> json) =>
+    _$_ProspectTrackingRequest(
+      mobile: json['mobile'] as String?,
+    );
+
+Map<String, dynamic> _$$_ProspectTrackingRequestToJson(
+        _$_ProspectTrackingRequest instance) =>
+    <String, dynamic>{
+      'mobile': instance.mobile,
+    };

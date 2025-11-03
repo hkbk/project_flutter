@@ -1,0 +1,19 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'login_multiple_request.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_LoginMultipleRequest _$$_LoginMultipleRequestFromJson(
+        Map<String, dynamic> json) =>
+    _$_LoginMultipleRequest(
+      username: json['username'] as String?,
+    );
+
+Map<String, dynamic> _$$_LoginMultipleRequestToJson(
+        _$_LoginMultipleRequest instance) =>
+    <String, dynamic>{
+      'username': instance.username,
+    };

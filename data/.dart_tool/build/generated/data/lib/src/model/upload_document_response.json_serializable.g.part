@@ -1,0 +1,19 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+UploadDocumentResponse _$UploadDocumentResponseFromJson(
+        Map<String, dynamic> json) =>
+    UploadDocumentResponse(
+      code: json['code'] as num?,
+      status: json['status'] as bool?,
+      message: json['message'] as String?,
+    );
+
+Map<String, dynamic> _$UploadDocumentResponseToJson(
+        UploadDocumentResponse instance) =>
+    <String, dynamic>{
+      'code': instance.code,
+      'status': instance.status,
+      'message': instance.message,
+    };

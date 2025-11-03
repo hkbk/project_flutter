@@ -1,0 +1,73 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+DocumentModel _$DocumentModelFromJson(Map<String, dynamic> json) =>
+    DocumentModel(
+      doucmentId: json['doucmentId'] as num?,
+      path: json['path'] as String?,
+      name: json['name'] as String?,
+      ext: json['ext'] as String?,
+      documentType:
+          $enumDecodeNullable(_$DocumentTypeEnumMap, json['documentType']),
+      front: json['front'] == null
+          ? null
+          : FileOfDocumentModel.fromJson(json['front'] as Map<String, dynamic>),
+      back: json['back'] == null
+          ? null
+          : FileOfDocumentModel.fromJson(json['back'] as Map<String, dynamic>),
+      categories:
+          $enumDecodeNullable(_$DocumentCategoriesEnumMap, json['categories']),
+    );
+
+Map<String, dynamic> _$DocumentModelToJson(DocumentModel instance) =>
+    <String, dynamic>{
+      'doucmentId': instance.doucmentId,
+      'path': instance.path,
+      'name': instance.name,
+      'ext': instance.ext,
+      'documentType': _$DocumentTypeEnumMap[instance.documentType],
+      'front': instance.front,
+      'back': instance.back,
+      'categories': _$DocumentCategoriesEnumMap[instance.categories],
+    };
+
+const _$DocumentTypeEnumMap = {
+  DocumentType.none: 'none',
+  DocumentType.aadhaarCard: 'aadhaarCard',
+  DocumentType.drivingLicense: 'drivingLicense',
+  DocumentType.voterId: 'voterId',
+  DocumentType.passport: 'passport',
+  DocumentType.electricityBill: 'electricityBill',
+  DocumentType.rationCard: 'rationCard',
+  DocumentType.rentalAgreement: 'rentalAgreement',
+  DocumentType.panCard: 'panCard',
+  DocumentType.photo: 'photo',
+};
+
+const _$DocumentCategoriesEnumMap = {
+  DocumentCategories.address: 'address',
+  DocumentCategories.identity: 'identity',
+  DocumentCategories.photo: 'photo',
+};
+
+FileOfDocumentModel _$FileOfDocumentModelFromJson(Map<String, dynamic> json) =>
+    FileOfDocumentModel(
+      id: json['id'] as int?,
+      path: json['path'] as String?,
+      ext: json['ext'] as String?,
+      dataImageBase64: json['dataImageBase64'] as String?,
+      isFrontSide: json['isFrontSide'] as bool?,
+      documentId: json['documentId'] as num?,
+    );
+
+Map<String, dynamic> _$FileOfDocumentModelToJson(
+        FileOfDocumentModel instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'path': instance.path,
+      'ext': instance.ext,
+      'dataImageBase64': instance.dataImageBase64,
+      'isFrontSide': instance.isFrontSide,
+      'documentId': instance.documentId,
+    };

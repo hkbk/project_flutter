@@ -1,0 +1,57 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+LinkedAccountResponse _$LinkedAccountResponseFromJson(
+        Map<String, dynamic> json) =>
+    LinkedAccountResponse(
+      code: json['code'] as num?,
+      status: json['status'] as bool?,
+      message: json['message'] as String?,
+      data: (json['data'] as List<dynamic>?)
+          ?.map((e) => LinkedAccount.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+LinkedAccount _$LinkedAccountFromJson(Map<String, dynamic> json) =>
+    LinkedAccount(
+      id: json['id'] as String?,
+      username: json['username'] as String?,
+      accountNo: json['account_no'] as String?,
+      customerAccNo: json['customer_acc_no'] as String?,
+      mobile: json['mobile'] as String?,
+      alternateMobile: json['alternate_mobile'] as String?,
+      email: json['email'] as String?,
+      entityCode: json['entity_code'] as String?,
+      entityName: json['entity_name'] as String?,
+      title: json['title'] as String?,
+      firstName: json['first_name'] as String?,
+      middleName: json['middle_name'] as String?,
+      lastName: json['last_name'] as String?,
+      cityId: json['city_id'] as String?,
+      cityShortCode: json['city_short_code'] as String?,
+      cityName: json['city_name'] as String?,
+      workPhoneNo: json['work_phone_no'] as String?,
+      homePhoneNo: json['home_phone_no'] as String?,
+      address1: json['address1'] as String?,
+      address2: json['address2'] as String?,
+      address3: json['address3'] as String?,
+      country: json['country'] as String?,
+      state: json['state'] as String?,
+      district: json['district'] as String?,
+      region: json['region'] as String?,
+      pinCode: json['pincode'] as String?,
+      status: json['status'] as String?,
+      profileImage: json['profile_image'] as String?,
+      ip: json['ip'] as String?,
+      createdDate: json['created_date'] == null
+          ? null
+          : DateTime.parse(json['created_date'] as String),
+      modifiedDate: json['modified_date'] == null
+          ? null
+          : DateTime.parse(json['modified_date'] as String),
+      dob: json['dob'] as String?,
+      skinColour: json['skin_colour'],
+      language: json['language'],
+      geoTag: json['geo_tag'] as String?,
+    );

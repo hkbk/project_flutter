@@ -1,0 +1,33 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+CityResponseData _$CityResponseDataFromJson(Map<String, dynamic> json) =>
+    CityResponseData(
+      code: json['code'] as num?,
+      status: json['status'] as bool?,
+      message: json['message'] as String?,
+      data: (json['data'] as List<dynamic>?)
+          ?.map((e) => CityData.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+Map<String, dynamic> _$CityResponseDataToJson(CityResponseData instance) =>
+    <String, dynamic>{
+      'code': instance.code,
+      'status': instance.status,
+      'message': instance.message,
+      'data': instance.data,
+    };
+
+CityData _$CityDataFromJson(Map<String, dynamic> json) => CityData(
+      cityName: json['city_name'] as String?,
+      cityCode: json['city_code'] as String?,
+      shortCode: json['short_code'] as String?,
+    );
+
+Map<String, dynamic> _$CityDataToJson(CityData instance) => <String, dynamic>{
+      'city_name': instance.cityName,
+      'city_code': instance.cityCode,
+      'short_code': instance.shortCode,
+    };

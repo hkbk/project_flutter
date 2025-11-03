@@ -1,0 +1,246 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+HomeSyncServiceAppResponse _$HomeSyncServiceAppResponseFromJson(
+        Map<String, dynamic> json) =>
+    HomeSyncServiceAppResponse(
+      code: json['code'] as num?,
+      status: json['status'] as bool?,
+      message: json['message'] as String?,
+      data: json['data'] == null
+          ? null
+          : HomeSyncServiceAppData.fromJson(
+              json['data'] as Map<String, dynamic>),
+    );
+
+HomeSyncServiceAppData _$HomeSyncServiceAppDataFromJson(
+        Map<String, dynamic> json) =>
+    HomeSyncServiceAppData(
+      cities: (json['city_master'] as List<dynamic>?)
+          ?.map((e) => CityMaster.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      username: json['username'] as String?,
+      maxChildLimit: json['max_child_limit'] as int?,
+      homeScreenData: json['home_screen_data'] == null
+          ? null
+          : HomeScreenData.fromJson(
+              json['home_screen_data'] as Map<String, dynamic>),
+      changePlanCaption: json['change_plan_caption'] as String?,
+    )
+      ..packageCategoryMaster = (json['package_category_master']
+              as List<dynamic>?)
+          ?.map(
+              (e) => PackageCategoryMaster.fromJson(e as Map<String, dynamic>))
+          .toList()
+      ..packageMaster = (json['package_master'] as List<dynamic>?)
+          ?.map((e) => PackageMaster.fromJson(e as Map<String, dynamic>))
+          .toList()
+      ..ticketMaster = (json['ticket_master'] as List<dynamic>?)
+          ?.map((e) => TicketMaster.fromJson(e as Map<String, dynamic>))
+          .toList()
+      ..usageCategoryMaster = (json['usage_category_master'] as List<dynamic>?)
+          ?.map((e) => UsageCategoryMaster.fromJson(e as Map<String, dynamic>))
+          .toList()
+      ..ratingMaster = (json['rating_master'] as List<dynamic>?)
+          ?.map((e) => RatingMaster.fromJson(e as Map<String, dynamic>))
+          .toList()
+      ..offerMaster = (json['offer_master'] as List<dynamic>?)
+          ?.map((e) => OfferMaster.fromJson(e as Map<String, dynamic>))
+          .toList()
+      ..popUpDetail = json['popUpDetail'] == null
+          ? null
+          : PopUpDetail.fromJson(json['popUpDetail'] as Map<String, dynamic>)
+      ..serverTime = json['server_time'] as String?
+      ..accountScreenData = json['account_screen_data'] == null
+          ? null
+          : AccountScreenData.fromJson(
+              json['account_screen_data'] as Map<String, dynamic>)
+      ..popups = json['popups'] == null
+          ? null
+          : Popups.fromJson(json['popups'] as Map<String, dynamic>);
+
+HomeScreenData _$HomeScreenDataFromJson(Map<String, dynamic> json) =>
+    HomeScreenData(
+      containers: (json['containers'] as List<dynamic>?)
+          ?.map((e) => Containers.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      homeContainersData: json['homeContainersData'] as Map<String, dynamic>?,
+    );
+
+Containers _$ContainersFromJson(Map<String, dynamic> json) => Containers(
+      id: json['id'] as String?,
+      name: json['name'] as String?,
+      sequence: json['sequence'] as num?,
+      title: json['title'] as String?,
+      subtitle: json['subtitle'] as String?,
+    );
+
+PackageCategoryMaster _$PackageCategoryMasterFromJson(
+        Map<String, dynamic> json) =>
+    PackageCategoryMaster(
+      json['id'] as String?,
+      json['cat_name'] as String?,
+      json['status'] as String?,
+    );
+
+PackageMaster _$PackageMasterFromJson(Map<String, dynamic> json) =>
+    PackageMaster(
+      json['id'] as String?,
+      json['package_type'] as String?,
+      json['package_category_id'] as String?,
+      json['package_category'] as String?,
+      json['package_code'] as String?,
+      json['package_name'] as String?,
+      json['netopcode'] as String?,
+      json['description'] as String?,
+      json['tenure'] as String?,
+      json['original_price_without_tax'] as String?,
+      json['offer_original_price'] as String?,
+      json['price_with_tax'] as String?,
+      json['offer_price_with_tax'] as String?,
+      json['install_charges'] as String?,
+      json['installChargesWithTax'] as String?,
+      json['install_charges_existing'] as String?,
+      json['install_charges_with_tax_existing'] as String?,
+      json['package_quota'] as String?,
+      json['current_speed'] as String?,
+      json['current_speed_unit'] as String?,
+      json['speed_breaker_speed'] as String?,
+      json['is_new'] as String?,
+      json['is_existing'] as String?,
+      json['is_router_free'] as String?,
+      json['status'] as String?,
+      json['city_id'] as String?,
+      json['city_name'] as String?,
+      json['city_code'] as String?,
+      json['usage_category'] as String?,
+      json['start_date'] as String?,
+      json['end_date'] as String?,
+      json['is_recommended'] as String?,
+      json['is_monthfree'] as String?,
+      json['fixed_deposit'] as String?,
+    );
+
+TicketMaster _$TicketMasterFromJson(Map<String, dynamic> json) => TicketMaster(
+      json['id'] as String?,
+      json['cat_code_hyd'] as String?,
+      json['cat_code_roi'] as String?,
+      json['nature_code_hyd'] as String?,
+      json['nature_code_roi'] as String?,
+      json['description_hyd'] as String?,
+      json['description_roi'] as String?,
+      json['category_name'] as String?,
+      json['category_code'] as String?,
+      json['parent_id'] as String?,
+      json['status'] as String?,
+    );
+
+UsageCategoryMaster _$UsageCategoryMasterFromJson(Map<String, dynamic> json) =>
+    UsageCategoryMaster(
+      json['id'] as String?,
+      json['city_id'] as String?,
+      json['city_name'] as String?,
+      json['usage_category'] as String?,
+      json['min_value'] as String?,
+      json['max_value'] as String?,
+      json['status'] as String?,
+    );
+
+RatingMaster _$RatingMasterFromJson(Map<String, dynamic> json) => RatingMaster(
+      json['id'] as String?,
+      json['type'] as String?,
+      json['cat_name'] as String?,
+      json['status'] as String?,
+    );
+
+OfferMaster _$OfferMasterFromJson(Map<String, dynamic> json) => OfferMaster(
+      json['id'] as String?,
+      json['title'] as String?,
+      json['type'] as String?,
+      json['image'] as String?,
+      json['city_id'] as String?,
+      json['actionable'] as String?,
+      json['url'] as String?,
+      json['priority'] as String?,
+      json['start_date'] as String?,
+      json['end_date'] as String?,
+      json['status'] as String?,
+      json['username'] as String?,
+    );
+
+PopUpDetail _$PopUpDetailFromJson(Map<String, dynamic> json) => PopUpDetail(
+      json['title'] as String?,
+      json['message'] as String?,
+      json['status'] as String?,
+      json['frequency'] as String?,
+      json['visible'] as String?,
+      json['image'] == null
+          ? null
+          : PopUpDetailImage.fromJson(json['image'] as Map<String, dynamic>),
+      (json['buttons'] as List<dynamic>?)
+          ?.map((e) => PopUpDetailButtons.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+PopUpDetailImage _$PopUpDetailImageFromJson(Map<String, dynamic> json) =>
+    PopUpDetailImage(
+      json['url'] as String?,
+      json['visible'] as String?,
+    );
+
+PopUpDetailButtons _$PopUpDetailButtonsFromJson(Map<String, dynamic> json) =>
+    PopUpDetailButtons(
+      json['actionable'] as String?,
+      json['url'] as String?,
+      json['title'] as String?,
+    );
+
+AccountContainersData _$AccountContainersDataFromJson(
+        Map<String, dynamic> json) =>
+    AccountContainersData(
+      title: json['title'] as String?,
+      image: json['image'] as String?,
+      link: json['link'] as String?,
+      highlight: json['highlight'] as num?,
+      redirectInfo: json['redirect_info'] == null
+          ? null
+          : RedirectInfoAccount.fromJson(
+              json['redirect_info'] as Map<String, dynamic>),
+    );
+
+RedirectInfoAccount _$RedirectInfoAccountFromJson(Map<String, dynamic> json) =>
+    RedirectInfoAccount(
+      type: json['type'] as String?,
+      url: json['URL'] as String?,
+      data: json['data'],
+    );
+
+DataRedirectInfoAccount _$DataRedirectInfoAccountFromJson(
+        Map<String, dynamic> json) =>
+    DataRedirectInfoAccount(
+      moduleId: json['module_id'] as String?,
+      screenId: json['screen_id'] as String?,
+      screenInfo: json['screen_info'] as String?,
+    );
+
+AccountScreenData _$AccountScreenDataFromJson(Map<String, dynamic> json) =>
+    AccountScreenData(
+      (json['containers'] as List<dynamic>?)
+          ?.map((e) => Containers.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      json['accountContainersData'] as Map<String, dynamic>?,
+    );
+
+Popups _$PopupsFromJson(Map<String, dynamic> json) => Popups(
+      (json['ticket_details'] as List<dynamic>?)
+          ?.map((e) => TicketDetails.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+TicketDetails _$TicketDetailsFromJson(Map<String, dynamic> json) =>
+    TicketDetails(
+      json['reference_id'] as String?,
+      json['content'] as String?,
+      json['status'] as String?,
+    );

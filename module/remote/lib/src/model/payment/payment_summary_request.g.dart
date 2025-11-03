@@ -1,0 +1,29 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'payment_summary_request.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_PaymentSummaryRequest _$$_PaymentSummaryRequestFromJson(
+        Map<String, dynamic> json) =>
+    _$_PaymentSummaryRequest(
+      userName: json['username'] as String?,
+      firstName: json['first_name'] as String?,
+      lastName: json['last_name'] as String?,
+      packageCode: json['package_code'] as String?,
+      packageType: json['package_type'] as String?,
+      planName: json['plan_name'] as String?,
+    );
+
+Map<String, dynamic> _$$_PaymentSummaryRequestToJson(
+        _$_PaymentSummaryRequest instance) =>
+    <String, dynamic>{
+      'username': instance.userName,
+      'first_name': instance.firstName,
+      'last_name': instance.lastName,
+      'package_code': instance.packageCode,
+      'package_type': instance.packageType,
+      'plan_name': instance.planName,
+    };

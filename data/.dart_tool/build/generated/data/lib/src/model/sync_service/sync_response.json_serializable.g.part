@@ -1,0 +1,31 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+SyncModel _$SyncModelFromJson(Map<String, dynamic> json) => SyncModel(
+      code: json['code'] as int?,
+      status: json['status'] as bool?,
+      message: json['message'] as String?,
+      data: json['data'] == null
+          ? null
+          : SyncModelData.fromJson(json['data'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$SyncModelToJson(SyncModel instance) => <String, dynamic>{
+      'code': instance.code,
+      'status': instance.status,
+      'message': instance.message,
+      'data': instance.data,
+    };
+
+SyncModelData _$SyncModelDataFromJson(Map<String, dynamic> json) =>
+    SyncModelData(
+      cityMaster: (json['city_master'] as List<dynamic>?)
+          ?.map((e) => CityMaster.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+Map<String, dynamic> _$SyncModelDataToJson(SyncModelData instance) =>
+    <String, dynamic>{
+      'city_master': instance.cityMaster,
+    };

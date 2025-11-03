@@ -1,0 +1,24 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'profile_update_request.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_ProfileUpdateRequest _$$_ProfileUpdateRequestFromJson(
+        Map<String, dynamic> json) =>
+    _$_ProfileUpdateRequest(
+      mobile: json['mobile'] as String?,
+      userType: json['user_type'] as String?,
+      image: json['image'] as String?,
+      username: json['username'] as String?,
+    );
+
+Map<String, dynamic> _$$_ProfileUpdateRequestToJson(
+        _$_ProfileUpdateRequest instance) =>
+    <String, dynamic>{
+      'user_type': instance.userType,
+      'image': instance.image,
+      'username': instance.username,
+    };

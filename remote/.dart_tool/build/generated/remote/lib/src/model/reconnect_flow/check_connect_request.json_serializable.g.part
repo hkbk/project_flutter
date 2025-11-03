@@ -1,0 +1,23 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_CheckConnectRequest _$$_CheckConnectRequestFromJson(
+        Map<String, dynamic> json) =>
+    _$_CheckConnectRequest(
+      accountNo: json['accountno'] as String?,
+      userName: json['username'] as String?,
+      cityName: json['city_name'] as String?,
+      mobile: json['mobile'] as String?,
+      srMobile: json['sr_mobile'] as String?,
+    );
+
+Map<String, dynamic> _$$_CheckConnectRequestToJson(
+        _$_CheckConnectRequest instance) =>
+    <String, dynamic>{
+      'accountno': instance.accountNo,
+      'username': instance.userName,
+      'city_name': instance.cityName,
+      'mobile': instance.mobile,
+      'sr_mobile': instance.srMobile,
+    };

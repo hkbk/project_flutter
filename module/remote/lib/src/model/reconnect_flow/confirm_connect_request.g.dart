@@ -1,0 +1,25 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'confirm_connect_request.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_ConfirmConnectRequest _$$_ConfirmConnectRequestFromJson(
+        Map<String, dynamic> json) =>
+    _$_ConfirmConnectRequest(
+      accountNo: json['accountno'] as String?,
+      cityName: json['city_name'] as String?,
+      newPackageCode: json['new_package_code'] as String?,
+      oldPackageCode: json['old_package_code'] as String?,
+    );
+
+Map<String, dynamic> _$$_ConfirmConnectRequestToJson(
+        _$_ConfirmConnectRequest instance) =>
+    <String, dynamic>{
+      'accountno': instance.accountNo,
+      'city_name': instance.cityName,
+      'new_package_code': instance.newPackageCode,
+      'old_package_code': instance.oldPackageCode,
+    };

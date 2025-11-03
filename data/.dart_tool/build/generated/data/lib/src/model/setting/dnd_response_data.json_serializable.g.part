@@ -1,0 +1,41 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+DndResponseData _$DndResponseDataFromJson(Map<String, dynamic> json) =>
+    DndResponseData(
+      code: json['code'] as num?,
+      status: json['status'] as bool?,
+      message: json['message'] as String?,
+      data: json['data'] == null
+          ? null
+          : DndData.fromJson(json['data'] as Map<String, dynamic>),
+    );
+
+DndData _$DndDataFromJson(Map<String, dynamic> json) => DndData(
+      accountNo: json['account_no'] as String?,
+      modes: (json['modes'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(k, DndService.fromJson(e as Map<String, dynamic>)),
+      ),
+    );
+
+DndMode _$DndModeFromJson(Map<String, dynamic> json) => DndMode(
+      sms: json['sms'] == null
+          ? null
+          : DndService.fromJson(json['sms'] as Map<String, dynamic>),
+      whatsapp: json['whatsapp'] == null
+          ? null
+          : DndService.fromJson(json['whatsapp'] as Map<String, dynamic>),
+      email: json['email'] == null
+          ? null
+          : DndService.fromJson(json['email'] as Map<String, dynamic>),
+      voiceCall: json['voice_call'] == null
+          ? null
+          : DndService.fromJson(json['voice_call'] as Map<String, dynamic>),
+    );
+
+DndService _$DndServiceFromJson(Map<String, dynamic> json) => DndService(
+      name: json['name'] as String?,
+      isEnabled: json['isEnabled'] as bool?,
+      order: json['order'] as num?,
+    );

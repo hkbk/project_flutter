@@ -1,0 +1,21 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'get_detail_prospect_request.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_GetDetailProspectRequest _$$_GetDetailProspectRequestFromJson(
+        Map<String, dynamic> json) =>
+    _$_GetDetailProspectRequest(
+      mobileNo: json['mobileNo'] as String?,
+      prospectNo: json['prospectNo'] as String?,
+      userName: json['username'] as String?,
+    );
+
+Map<String, dynamic> _$$_GetDetailProspectRequestToJson(
+        _$_GetDetailProspectRequest instance) =>
+    <String, dynamic>{
+      'username': instance.userName,
+    };

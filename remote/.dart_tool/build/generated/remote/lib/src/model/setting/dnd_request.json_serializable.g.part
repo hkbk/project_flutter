@@ -1,0 +1,14 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_DndRequest _$$_DndRequestFromJson(Map<String, dynamic> json) =>
+    _$_DndRequest(
+      mobileNumber: json['mobile_no'] as String?,
+      accountNumber: json['account_no'] as String?,
+    );
+
+Map<String, dynamic> _$$_DndRequestToJson(_$_DndRequest instance) =>
+    <String, dynamic>{
+      'account_no': instance.accountNumber,
+    };

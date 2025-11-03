@@ -1,0 +1,66 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+BillHistoryTransactionResponse _$BillHistoryTransactionResponseFromJson(
+        Map<String, dynamic> json) =>
+    BillHistoryTransactionResponse(
+      code: json['code'] as int?,
+      status: json['status'] as bool?,
+      message: json['message'] as String?,
+      data: (json['data'] as List<dynamic>?)
+          ?.map(
+              (e) => HistoryTransactionData.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+Map<String, dynamic> _$BillHistoryTransactionResponseToJson(
+        BillHistoryTransactionResponse instance) =>
+    <String, dynamic>{
+      'code': instance.code,
+      'status': instance.status,
+      'message': instance.message,
+      'data': instance.data,
+    };
+
+HistoryTransactionData _$HistoryTransactionDataFromJson(
+        Map<String, dynamic> json) =>
+    HistoryTransactionData(
+      userName: json['username'] as String?,
+      accountNo: json['account_no'] as String?,
+      userMobile: json['user_mobile'] as String?,
+      amount: json['amount'],
+      txnId: json['txn_id'] as String?,
+      txnReferenceNo: json['txn_reference_no'] as String?,
+      paymentStatus: json['payment_status'] as String?,
+      createdDate: json['created_date'] as String?,
+      docType: json['doctype'] as String?,
+      docNo: json['docno'] as String?,
+      customerNo: json['customerno'] as String?,
+      date: json['date'] as String?,
+      currencyCode: json['currencycode'] as String?,
+      remarks: json['remarks'] as String?,
+      paymentMmode: json['payment_mode'] as String?,
+      receiptNo: json['receiptno'] as String?,
+    );
+
+Map<String, dynamic> _$HistoryTransactionDataToJson(
+        HistoryTransactionData instance) =>
+    <String, dynamic>{
+      'username': instance.userName,
+      'account_no': instance.accountNo,
+      'user_mobile': instance.userMobile,
+      'amount': instance.amount,
+      'txn_id': instance.txnId,
+      'txn_reference_no': instance.txnReferenceNo,
+      'payment_status': instance.paymentStatus,
+      'created_date': instance.createdDate,
+      'doctype': instance.docType,
+      'docno': instance.docNo,
+      'customerno': instance.customerNo,
+      'date': instance.date,
+      'currencycode': instance.currencyCode,
+      'remarks': instance.remarks,
+      'payment_mode': instance.paymentMmode,
+      'receiptno': instance.receiptNo,
+    };

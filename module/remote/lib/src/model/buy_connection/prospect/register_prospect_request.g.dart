@@ -1,0 +1,43 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'register_prospect_request.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_RegisterProspectRequest _$$_RegisterProspectRequestFromJson(
+        Map<String, dynamic> json) =>
+    _$_RegisterProspectRequest(
+      mobileNumber: json['mobilenumber'] as String?,
+      firstName: json['first_name'] as String?,
+      lastName: json['last_name'] as String?,
+      dob: json['dob'] as String?,
+      email: json['email'] as String?,
+      address1: json['address1'] as String?,
+      address2: json['address2'] as String?,
+      address3: json['address3'] as String?,
+      city: json['city'] as String?,
+      pincode: json['pincode'] as String?,
+      lat: json['lat'] as String?,
+      long: json['long'] as String?,
+      coupon: json['coupon'] as String?,
+    );
+
+Map<String, dynamic> _$$_RegisterProspectRequestToJson(
+        _$_RegisterProspectRequest instance) =>
+    <String, dynamic>{
+      'mobilenumber': instance.mobileNumber,
+      'first_name': instance.firstName,
+      'last_name': instance.lastName,
+      'dob': instance.dob,
+      'email': instance.email,
+      'address1': instance.address1,
+      'address2': instance.address2,
+      'address3': instance.address3,
+      'city': instance.city,
+      'pincode': instance.pincode,
+      'lat': instance.lat,
+      'long': instance.long,
+      'coupon': instance.coupon,
+    };

@@ -1,0 +1,47 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+UpdateProfileResponse _$UpdateProfileResponseFromJson(
+        Map<String, dynamic> json) =>
+    UpdateProfileResponse(
+      code: json['code'] as num?,
+      status: json['status'] as bool?,
+      message: json['message'] as String?,
+      data: json['data'] == null
+          ? null
+          : UpdateProfileData.fromJson(json['data'] as Map<String, dynamic>),
+      imageUrl: json['image url'] as String?,
+    );
+
+UpdateProfileData _$UpdateProfileDataFromJson(Map<String, dynamic> json) =>
+    UpdateProfileData(
+      username: json['username'] as String?,
+      accountNo: json['account_no'] as String?,
+      customerAccNo: json['customer_acc_no'] as String?,
+      mobile: json['mobile'] as String?,
+      email: json['email'] as String?,
+      title: json['title'] as String?,
+      firstName: json['first_name'] as String?,
+      middleName: json['middle_name'] as String?,
+      lastName: json['last_name'] as String?,
+      workPhoneNo: json['work_phone_no'] as String?,
+      homePhoneNo: json['home_phone_no'] as String?,
+      address1: json['address1'] as String?,
+      address2: json['address2'] as String?,
+      address3: json['address3'] as String?,
+      country: json['country'] as String?,
+      state: json['state'] as String?,
+      district: json['district'] as String?,
+      cityName: json['city_name'] as String?,
+      pincode: json['pincode'] as String?,
+      status: json['status'] as num?,
+      profileImage: json['profile_image'] as String?,
+      entityCode: json['entity_code'] as String?,
+      entityName: json['entity_name'] as String?,
+      region: json['region'] as String?,
+      cityId: json['city_id'] as String?,
+      dob: json['dob'] as String?,
+      id: json['id'] as String?,
+      authToken: json['auth_token'] as String?,
+    );

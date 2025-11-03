@@ -1,0 +1,90 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+ShiftConnectionResponse _$ShiftConnectionResponseFromJson(
+        Map<String, dynamic> json) =>
+    ShiftConnectionResponse(
+      currentPackageCode: json['current_package_code'] as String?,
+      code: json['code'] as int?,
+      status: json['status'] as bool?,
+      message: json['message'] as String?,
+      data: (json['data'] as List<dynamic>?)
+          ?.map((e) => SuggestedPlanData.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+Map<String, dynamic> _$ShiftConnectionResponseToJson(
+        ShiftConnectionResponse instance) =>
+    <String, dynamic>{
+      'current_package_code': instance.currentPackageCode,
+      'code': instance.code,
+      'status': instance.status,
+      'message': instance.message,
+      'data': instance.data,
+    };
+
+SuggestedPlanData _$SuggestedPlanDataFromJson(Map<String, dynamic> json) =>
+    SuggestedPlanData(
+      packageCode: json['package_code'] as String?,
+      packageName: json['package_name'] as String?,
+      packageCategory: json['package_category'] as String?,
+      description: json['description'] as String?,
+      baseTenure: json['base_tenure'] as String?,
+      offerPriceWithTax: json['offer_price_with_tax'] as String?,
+      wifi: json['wifi'] as String?,
+      monthFree: json['month_free'] as int?,
+      montlyRental: json['montly_rental'] as int?,
+      addons: json['addons'] as String?,
+      currentPlan: json['current_plan'] as String?,
+      currentSpeed: json['current_speed'] as String?,
+      currentSpeedUnit: json['current_speed_unit'] as String?,
+    );
+
+Map<String, dynamic> _$SuggestedPlanDataToJson(SuggestedPlanData instance) =>
+    <String, dynamic>{
+      'package_code': instance.packageCode,
+      'package_name': instance.packageName,
+      'package_category': instance.packageCategory,
+      'description': instance.description,
+      'base_tenure': instance.baseTenure,
+      'offer_price_with_tax': instance.offerPriceWithTax,
+      'wifi': instance.wifi,
+      'month_free': instance.monthFree,
+      'montly_rental': instance.montlyRental,
+      'addons': instance.addons,
+      'current_plan': instance.currentPlan,
+      'current_speed': instance.currentSpeed,
+      'current_speed_unit': instance.currentSpeedUnit,
+    };
+
+CheckConnectionResponse _$CheckConnectionResponseFromJson(
+        Map<String, dynamic> json) =>
+    CheckConnectionResponse(
+      code: json['code'] as int?,
+      status: json['status'] as bool?,
+      message: json['message'] as String?,
+      data: json['data'] == null
+          ? null
+          : CheckConnectionData.fromJson(json['data'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$CheckConnectionResponseToJson(
+        CheckConnectionResponse instance) =>
+    <String, dynamic>{
+      'code': instance.code,
+      'status': instance.status,
+      'message': instance.message,
+      'data': instance.data,
+    };
+
+CheckConnectionData _$CheckConnectionDataFromJson(Map<String, dynamic> json) =>
+    CheckConnectionData(
+      action: json['action'] as String?,
+    );
+
+Map<String, dynamic> _$CheckConnectionDataToJson(
+        CheckConnectionData instance) =>
+    <String, dynamic>{
+      'action': instance.action,
+    };
